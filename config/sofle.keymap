@@ -28,14 +28,14 @@
         explorer: explorer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp E>;
+            bindings = <&mt LS(LEFT_WIN) E>;
             label = "EXPLORER";
         };
 
         run: run {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp R>;
+            bindings = <&mt LEFT_WIN R>;
             label = "RUN";
         };
 
