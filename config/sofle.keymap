@@ -64,8 +64,22 @@
         threefolder: threefolder {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N)) &kp LS(E) &kp X &kp P &kp O &kp R &kp T &kp LC(LS(N)) &kp LS(O) &kp R &kp I &kp G &kp I &kp N &kp A &kp L &kp ENTER>;
+            bindings = <&kp LC(LS(N)) &kp LS(E) &kp X &kp P &kp O &kp R &kp T &kp ENTER &kp LC(LS(N)) &kp LS(O) &kp R &kp I &kp G &kp I &kp N &kp A &kp L &kp ENTER>;
             label = "THREEFOLDER";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Printttt {
+            bindings = <&kp C_AC_PRINT>;
+            key-positions = <28 29>;
+        };
+
+        cap {
+            bindings = <&kp CAPS>;
+            key-positions = <13 37>;
         };
     };
 
