@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=', TAB, Q, W, E, R, T, Y, U, I, O, P, '[', LEFT SHIFT, A, S, D, F, G, H, J, K, L, ;, '''', LEFT
+  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', TAB, Q, W, E, R, T, Y, U, I, O, P, '[', LEFT SHIFT, A, S, D, F, G, H, J, K, L, ;, '''', LEFT
       CONTROL, Z, X, C, V, B, CLCK, '', N, M, ',', ., /, RSHFT, adjust, LALT, SPACE, lower, raise, '', SPACE, BACKSPACE, '', LEFT GUI]
   lower:
   - {t: ▽, type: trans}
@@ -16,7 +16,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - DEL
-  - {t: ▽, type: trans}
+  - '&create'
   - UP ARROW
   - '&explorer'
   - '&run'
@@ -106,7 +106,7 @@ layers:
   - ','
   - .
   - /
-  - CLCK
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -131,7 +131,7 @@ layers:
   - F9
   - F10
   - F11
-  - W
+  - {t: ▽, type: trans}
   - ''
   - ''
   - ''
@@ -141,8 +141,8 @@ layers:
   - '['
   - ']'
   - \
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&threefolder'
+  - F12
   - ''
   - ''
   - ''
