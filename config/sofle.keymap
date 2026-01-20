@@ -20,8 +20,8 @@
         compatible = "zmk,conditional-layers";
 
         three {
-            if-layers = <1>;
-            then-layer = <2>;
+            if-layers = <1 2>;
+            then-layer = <4>;
         };
     };
 
