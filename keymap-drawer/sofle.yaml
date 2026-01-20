@@ -42,7 +42,7 @@ layers:
   - {t: ▽, type: trans}
   - LEFT GUI
   - CONTEXT MENU
-  - KP PLUS
+  - '&desktop'
   - END
   - BACKSPACE
   - {t: ▽, type: trans}
