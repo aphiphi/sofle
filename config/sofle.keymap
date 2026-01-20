@@ -109,11 +109,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp MINUS  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                    &trans     &trans    &trans    &trans     &trans   &trans
-&kp EQUAL  &kp Y         &kp U         &kp I         &kp O         &kp P                           &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
-&trans     &kp H         &kp J         &kp K         &kp L         &kp CLCK                        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&trans     &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
-                         &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
+&kp MINUS  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp EQUAL  &kp Y         &kp U         &kp I         &kp O         &kp P                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp H         &kp J         &kp K         &kp L         &kp SEMICOLON                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp N         &kp M         &kp COMMA     &kp PERIOD    &kp SLASH      &kp CLCK    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans        &trans        &trans        &trans         &trans      &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
