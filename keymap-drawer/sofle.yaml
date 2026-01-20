@@ -89,10 +89,10 @@ layers:
   - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LALT
-  - LCTRL
-  - LSHFT
-  - {t: ▽, type: trans}
+  - H
+  - J
+  - K
+  - L
   - CLCK
   - PG DN
   - LEFT
