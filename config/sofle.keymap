@@ -28,16 +28,14 @@
         explorer: explorer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_GUI E>, <&macro_press>;
-
+            bindings = <&kp LG(E)>;
             label = "EXPLORER";
         };
 
         run: run {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_GUI R>, <&macro_press>;
-
+            bindings = <&kp LG(R)>;
             label = "RUN";
         };
 
@@ -46,6 +44,13 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT &kp P &kp ENTER &kp ENTER>;
             label = "ACRO";
+        };
+
+        desktop: desktop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(D)>;
+            label = "DESKTOP";
         };
     };
 
@@ -90,7 +95,7 @@
 &trans   &kp F1          &kp F2              &kp F3           &kp F4    &kp F5                           &trans  &trans  &trans  &trans  &trans  &trans
 &kp DEL  &trans          &kp UP_ARROW        &explorer        &run      &acro                            &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &kp LEFT_ARROW  &kp DOWN_ARROW      &kp RIGHT_ARROW  &kp HOME  &kp ENTER                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &kp LEFT_GUI    &kp K_CONTEXT_MENU  &kp KP_PLUS      &kp END   &kp BACKSPACE  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp LEFT_GUI    &kp K_CONTEXT_MENU  &desktop         &kp END   &kp BACKSPACE  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                          &trans              &trans           &trans    &trans         &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
