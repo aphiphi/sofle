@@ -16,14 +16,7 @@
 / {
     // Activate ADJUST layer by pressing raise and lower
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        three {
-            if-layers = <1 2>;
-            then-layer = <4>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
         explorer: explorer {
@@ -67,19 +60,21 @@
             bindings = <&kp LC(LS(N)) &kp LS(E) &kp X &kp P &kp O &kp R &kp T &kp ENTER &kp LC(LS(N)) &kp LS(O) &kp R &kp I &kp G &kp I &kp N &kp A &kp L &kp ENTER>;
             label = "THREEFOLDER";
         };
+
+        ASME: ASME {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp S &kp M &kp E>;
+            label = "ASME";
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        Printttt {
-            bindings = <&kp C_AC_PRINT>;
-            key-positions = <28 29>;
-        };
-
         cap {
             bindings = <&kp CAPS>;
-            key-positions = <13 37>;
+            key-positions = <17 41>;
         };
     };
 
@@ -101,12 +96,12 @@
 &kp TAB           &kp Q   &kp W   &kp E     &kp R      &kp T                      &kp Y      &kp U          &kp I      &kp O         &kp P     &kp LEFT_BRACKET
 &kp LEFT_SHIFT    &kp A   &kp S   &kp D     &kp F      &kp G                      &kp H      &kp J          &kp K      &kp L         &kp SEMI  &kp SQT
 &kp LEFT_CONTROL  &kp Z   &kp X   &kp C     &kp V      &kp B   &kp CLCK    &none  &kp N      &kp M          &kp COMMA  &kp DOT       &kp FSLH  &kp RSHFT
-                          &mo 3   &kp LALT  &kp SPACE  &mo 1   &mo 2       &none  &kp SPACE  &kp BACKSPACE  &none      &kp LEFT_GUI
+                          &mo 3   &kp LALT  &kp SPACE  &mo 1   &mo 2       &none  &kp SPACE  &kp BACKSPACE  &mo 4      &kp LEFT_GUI
             >;
 
             sensor-bindings =
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
-                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         lower_layer {
@@ -128,7 +123,9 @@
                          &trans              &trans           &trans    &trans         &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         raise_layer {
@@ -162,20 +159,20 @@
 
             label = "adjust";
             bindings = <
-&kp F6  &kp F7            &kp F8             &kp F9                &kp F10       &kp F11                            &trans  &none  &none  &none  &none  &none
-&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH  &threefolder  &kp F12                            &none   &none  &none  &none  &none  &none
-&trans  &trans            &kp PAGE_UP        &none                 &none         &kp SQT                            &none   &none  &none  &none  &none  &none
-&trans  &none             &kp PAGE_DOWN      &none                 &none         &none    &trans    &studio_unlock  &none   &none  &none  &none  &none  &none
-                          &none              &none                 &none         &none    &none     &none           &none   &none  &none  &none
+&kp F6  &kp F7            &kp F8             &kp F9                &kp F10       &kp F11                    &trans  &none  &none  &none  &none  &none
+&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH  &threefolder  &kp F12                    &none   &none  &none  &none  &none  &none
+&trans  &trans            &kp PAGE_UP        &none                 &none         &kp SQT                    &none   &none  &none  &none  &none  &none
+&trans  &trans            &kp PAGE_DOWN      &none                 &none         &none    &trans    &trans  &none   &none  &none  &none  &none  &none
+                          &none              &none                 &none         &none    &none     &none   &none   &none  &none  &none
             >;
         };
 
         bluetooth {
             bindings = <
+&trans  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_CLR    &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                       &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
